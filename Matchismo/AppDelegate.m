@@ -13,6 +13,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    UITabBarController *tvc = (UITabBarController *)self.window.rootViewController;
+    UITabBar *tabBar = tvc.tabBar;
+    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+    
+    tabBarItem1.title = @"Playing Card";
+    tabBarItem2.title = @"Set Card";
+    
+    tabBarItem1.selectedImage = [UIImage imageNamed:@"icon_32x32"];
+    tabBarItem1.image = [UIImage imageNamed:@"icon_32x32-2"];
+    
+    tabBarItem2.selectedImage = [UIImage imageNamed:@"icon_32x32-1"];
+    tabBarItem2.image = [UIImage imageNamed:@"icon_32x32-2"];
+    
     return YES;
 }
 							
